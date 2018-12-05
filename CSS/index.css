@@ -35,47 +35,6 @@
   margin: 0;
   font-size: 48px;
 }
-.articles {
-  margin-top: 95px;
-}
-.article {
-  margin: 20px 10%;
-  padding: 0 20px 25px;
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-  background-color: white;
-  position: relative;
-  height: 50px;
-  overflow: hidden;
-  box-shadow: 2px 2px 2px lightgrey;
-}
-.article h2 {
-  font-size: 28px;
-  padding: 0;
-  margin: 15px 0 0;
-}
-.article .date {
-  margin: 0;
-  font-size: 14px;
-}
-.article .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.article .expandButton {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  font-size: 12px;
-  color: grey;
-  cursor: pointer;
-  transform: translate(-50%);
-  background-color: white;
-}
-.article-open {
-  height: 400px;
-}
 .menu-button {
   position: absolute;
   left: 20px;
@@ -104,6 +63,66 @@
 }
 .menu--open {
   display: block;
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cabin'), local('Cabin-Regular'), url(https://fonts.gstatic.com/s/cabin/v12/u-4x0qWljRw-Pd8w__g.ttf) format('truetype');
+}
+.articles {
+  margin-top: 95px;
+}
+.article {
+  margin: 20px 10%;
+  padding: 0 20px 25px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+.article p {
+  line-height: 1.5;
+  font-family: "Cabin", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  line-height: 32px;
+}
+.article img {
+  max-width: 800px;
+  margin: 20px 0;
+}
+.article h2 {
+  font-size: 28px;
+  padding: 0;
+  margin: 15px 0 0;
+}
+.article .date {
+  margin: 0;
+  font-size: 14px;
+}
+.article .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.article .expandButton {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
+}
+.article-open {
+  height: auto;
+  padding-bottom: 10px;
 }
 html,
 body {
