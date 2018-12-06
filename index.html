@@ -7,10 +7,12 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./CSS/index.css" />
   <script src="./Menu/Menu.js" async></script>
   <script src="./Article/Article.js" async></script>
+
+
 </head>
 
 <body>
-  <div class="header">
+  <div class=" header">
     <img class="menu-button" src="./assets/menu.png" />
     <h1>Lambda School Newsfeed</h1>
   </div>
@@ -24,8 +26,25 @@
       <li>Log Out</li>
     </ul>
   </div>
+
+  <section class="post_articles">
+    <h1>Add Newsfeed !</h1>
+    <form id="myForm" name="myForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="title" class="form-control" id="title" name="fname">
+      </div>
+      <div class="form-group">
+        <label for="comment">Article</label>
+        <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+      </div>
+    </form>
+    <button type="submit" id="submit" class="btn btn-primary">Post</button>
+  </section>
+
   <div class="articles">
     <div class="article">
+      <span class='delete'>𝐗</span>
       <h2>Lambda School Students: "We're the best!"</h2>
       <p class="date">Nov 5th, 2017</p>
 
@@ -57,8 +76,11 @@
         wookiee. Leia
         moff calamari mon obi-wan. Solo grievous lando coruscant. Jinn darth palpatine obi-wan mon.</p>
       <span class='expandButton'></span>
+
     </div>
     <div class="article">
+      <span class='delete'>𝐗</span>
+
       <h2>Javascript and You, ES6</h2>
       <p class="date">Nov 7th, 2017</p>
       <p>Alohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur
@@ -81,8 +103,11 @@
         bedroom. Padma
         and Parvati Sorting Hat Minister of Magic blue turban remember my last.</p>
       <span class='expandButton'></span>
+
     </div>
     <div class="article">
+      <span class='delete'>𝐗</span>
+
       <h2>React vs Angular vs Vue</h2>
       <p class="date">Nov 7th, 2017</p>
 
@@ -126,6 +151,8 @@
       <span class='expandButton'></span>
     </div>
     <div class="article">
+      <span class='delete'>𝐗</span>
+
       <h2>Professional Software Development in 2018</h2>
       <p class="date">Nov 7th, 2017</p>
       <p>Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor
@@ -160,6 +187,8 @@
       <span class='expandButton'></span>
     </div>
     <div class="article">
+      <span class='delete'>𝐗</span>
+
       <h2>15 Web Design Trends in 2018 (+1 Bonus)</h2>
       <p class="date">Nov 7th, 2017</p>
 
@@ -209,6 +238,8 @@
 
 
     <div class="article">
+      <span class='delete'>𝐗</span>
+
       <h2>. In web design, everything hard can be easy again</h2>
       <p class="date">Nov 7th, 2017</p>
 

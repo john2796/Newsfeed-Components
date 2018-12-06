@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 
 .articles {
-  margin-top: 95px;
+  margin: 95px 0;
 }
 
 .article {
@@ -15,6 +15,28 @@
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
 
+  .delete {
+    color: darkred;
+    font-size: 25px;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    cursor: pointer;
+    padding: 10px;
+
+    &:hover {
+      color: red;
+    }
+
+    &:active {
+      outline: none;
+      transform: translateY(4px);
+    }
+  }
+
+  .expandButton {
+    margin-left: 50px;
+  }
 
   p {
     line-height: 1.5;
@@ -59,6 +81,7 @@
     transform: translate(-50%);
     background-color: white;
   }
+
 }
 
 .article-open {
