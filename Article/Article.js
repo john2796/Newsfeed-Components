@@ -35,8 +35,10 @@ class Article {
 
 }
 
+
 class Post {
   constructor(input) {
+    // console.log(input);
     this.input = input;
     this.title = document.querySelector('#title');
     this.comment = document.querySelector('#comment');
@@ -63,22 +65,23 @@ class Post {
 
   // resetObj(state) {
 
-  //   let result = Object.keys(state).map((key) => ([String(key), state[key]]))
-  //   // const filter = result.filter(function (item, pos, self) {
-  //   //   return self.indexOf(item) === pos;
-  //   // })
-  //   result = 0
-  //   return result;
+  //   return {
+  //     state = {
+  //       title: "", // or you can omit undefined keys
+  //       comment: "",
+  //       date: new Date()
+  //     }
+  //   }
   // }
 
-
-
   submitHandler(state, post) {
-
     const { comment, title } = state;
-    console.log({ comment, title })
-    if (comment.length === 0) return;
-    if (title.length === 0) return;
+    // console.log({ comment, title })
+    if (comment.length === 0 || title.length === 0) {
+      alert('please fill out the both form!');
+      return;
+    }
+
     //check form submit 
 
     const articleDiv = document.createElement("div");
@@ -116,8 +119,7 @@ class Post {
     //append everything to articleDiv
     articleDiv.append(h2Title, closeBtn, date, text, span);
 
-    //append post
-
+    //append post to articles
     post.appendChild(articleDiv);
   }
 
@@ -144,21 +146,33 @@ class Post {
 
 */
 
+// article class
 let articles = document.querySelectorAll('.article');
 articles.forEach((article) => {
   // console.log(article)
   return new Article(article);
 })
 
-
+// get random date
 function randomDate(start, end) {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 }
 
+
+//post class
+
+
+
 let inputs = document.querySelectorAll('.form-group');
-inputs.forEach((input) => {
-  return new Post(input);
-})
+inputs = Array.from(inputs);
+const newPost = new Post(inputs);
+
+
+
+
+
+
+
 
 
 
